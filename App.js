@@ -29,8 +29,8 @@ function DetailsScreen({navigation}) {
           }}>
       <Text>Details Screen</Text>
       <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push('Details')}
+        title="Go to About Us"
+        onPress={() => navigation.Navigate('AboutUs')}
       />
     </View>
   );
@@ -44,8 +44,8 @@ function AboutUs({navigation}) {
           }}>
       <Text>Details Screen</Text>
       <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push('Details')}
+        title="Go to About us... again"
+        onPress={() => navigation.push('AboutUs')}
       />
     </View>
   );
