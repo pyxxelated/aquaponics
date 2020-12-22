@@ -35,6 +35,21 @@ function DetailsScreen({navigation}) {
     </View>
   );
 }
+function AboutUs({navigation}) {
+  return (
+    <View style={{ 
+          flex: 1, 
+          alignItems: 'center', 
+          justifyContent: 'center' 
+          }}>
+      <Text>Details Screen</Text>
+      <Button
+        title="Go to Details... again"
+        onPress={() => navigation.push('Details')}
+      />
+    </View>
+  );
+}
 
 const Stack = createStackNavigator();
 
@@ -44,6 +59,7 @@ function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen}/>
         <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="AboutUs" component={AboutUs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
