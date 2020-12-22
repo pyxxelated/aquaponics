@@ -30,7 +30,7 @@ function DetailsScreen({navigation}) {
       <Text>Details Screen</Text>
       <Button
         title="Go to About Us"
-        onPress={() => navigation.Navigate('AboutUs')}
+        onPress={() => navigation.navigate('AboutUs')}
       />
     </View>
   );
