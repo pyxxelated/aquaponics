@@ -1,43 +1,64 @@
 import * as React from 'react';
-import { Button, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, View, Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-// function DetailsScreen() {
-//   return (
-//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//       <Text>Details!</Text>
-//     </View>
-//   );
-// }
-
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home screen</Text>
-      {/* <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      /> */}
+    <View style={styles.container}>
+      <Text style={styles.text}> WELCOME</Text>
+      <Text style={styles.text1}> TO </Text>
+      <Text style={styles.text2}> SMART AQUAPONICS </Text>
     </View>
   );
 }
 
+
 function ControlScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Control screen</Text>
+    <View style={styles.container}>
+      <Text style = {styles.text1}>Feed Fish</Text>
+       {/* <Button onPress = { () => { console.log("DONE!")} } title="Open" /> */}
+       <Button title="Click Here" color="blue" onPress = {()=>{ Alert.alert("Done!")}}/>
     </View>
   );
 }
 function DashboardScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={styles.container}>
       <Text>Dashboard</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  text:{
+      color: 'black',
+      fontSize: 45,
+      fontWeight: 'bold',
+      textAlignVertical: 'top',
+      marginTop: 0,
+  },
+  text1:{
+    color: 'black',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlignVertical: 'top',
+    marginTop: 0,
+},
+text2:{
+  color: 'black',
+  fontSize: 40,
+  fontWeight: 'bold',
+  textAlignVertical: 'top',
+  marginTop: 0,
+},
+  container: {
+    flex: 1,
+    alignItems: 'center',
+  },
+});
 
 const HomeStack = createStackNavigator();
 
